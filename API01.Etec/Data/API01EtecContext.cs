@@ -9,7 +9,7 @@ namespace API01.Etec.Data
 {
     public class API01EtecContext : DbContext
     {
-        public API01EtecContext (DbContextOptions<API01EtecContext> options)
+        public API01EtecContext(DbContextOptions<API01EtecContext> options)
             : base(options)
         {
         }

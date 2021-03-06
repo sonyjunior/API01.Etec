@@ -1,9 +1,11 @@
-﻿using System;
+﻿using API01.Etec.Model;
+using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json;
 using System.Threading.Tasks;
-using API01.Etec.Model;
-using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -33,14 +35,14 @@ namespace API01.Etec.Controllers
         {
             return Ok(contatos.OrderBy(a => a.Nome).ToList());
         }
-        /*
+
         // GET api/<ContatoController>/5
         [HttpGet("{id}")]
         public ActionResult<ContatoModel> Get(int id)
         {
             return Ok(contatos.Where(a => a.Codigo == id).FirstOrDefault());
         }
-        */
+
         // GET api/<ContatoController>/nome/5
         [HttpGet("nome/{nome}")]
         public ActionResult<ContatoModel> GetByName(string nome)
